@@ -1,0 +1,63 @@
+{
+    "name": "vue_spa_webpack",
+    "version": "1.0.0",
+    "main": "''",
+    "scripts": {
+        "local": "gupack build -e local -s -f ./build/gupack-config.js",
+        "dev": "gupack build -e dev -s -f ./build/gupack-config.js",
+        "stg": "gupack build -e stg -s -f ./build/gupack-config.js",
+        "prd": "gupack build -e prd -f ./build/gupack-config.js",
+        "start": "gupack build -eso -f ./build/gupack-config.js",
+        "service": "nodemon ./server/app.js",
+        "test": "gupack test -f ./build/gupack-config.js"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "autoprefixer": "^8.1.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.3",
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-plugin-syntax-class-properties": "^6.13.0",
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+        "babel-plugin-transform-export-extensions": "^6.22.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "css-loader": "^0.28.10",
+        "gulp-autoprefixer": "^3.1.0",
+        "gulp-babel": "^7.0.1",
+        "gulp-concat": "^2.6.0",
+        "gulp-jsminer": "^1.0.2",
+        "gulp-merge-css": "^1.0.1",
+        "gulp-recache": "^1.0.5",
+        "gulp-sass": "^3.1.0",
+        "gulp-uglifycss": "^1.0.4",
+        "gulp-webpack-multi-entry": "^1.0.3",
+        "sass-loader": "^6.0.6",
+        "style-loader": "^0.20.2",
+        "svg-sprite-loader": "^3.6.2",
+        "svg-url-loader": "^2.3.1",
+        "url-loader": "^0.6.2",
+        "vue-loader": "^14.1.1",
+        "vue-style-loader": "^4.0.2",
+        "vue-template-compiler": "^2.5.13",
+        "webpack": "^4.0.1",
+        "webpack-cli": "^2.0.10"
+    },
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "babel-polyfill": "^6.26.0",
+        "font-awesome": "^4.7.0",
+        "lodash": "^4.17.5",
+        "moment": "^2.21.0",
+        "normalize.css": "^8.0.0",
+        "vue": "^2.5.13",
+        "vue-router": "^3.0.1",
+        "vuex": "^3.0.1"
+    },
+    "description": ""
+}

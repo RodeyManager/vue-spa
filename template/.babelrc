@@ -1,0 +1,19 @@
+{
+    "presets": [
+        "env"
+    ],
+    "compact": true,
+    "plugins": [
+        "syntax-dynamic-import",
+        "add-module-exports",
+        "transform-export-extensions",
+        "transform-es2015-modules-commonjs",
+        [
+            "syntax-class-properties",
+            {
+                "spec": true
+            }
+        ],
+        "transform-object-rest-spread"
+    ]
+}
