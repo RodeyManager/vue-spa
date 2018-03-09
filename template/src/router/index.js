@@ -1,6 +1,7 @@
 /**
  * Created by Rodey on 2018/2/28
  */
+import VueRouter from 'vue-router';
 import Index from '../views/index/Index.vue';
 
 const routerMapping = [

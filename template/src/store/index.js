@@ -57,8 +57,8 @@ const store = new Vuex.Store({
     },
     getters: {
         allTodos: state => state.todos,
-        allNum: state => DB.getTodoList().length,
-        completedNum: state => DB.getTodoList().filter(todo => todo.completed).length
+        allNum: state => state.todos.length,
+        completedNum: state => state.todos.filter(todo => todo.completed).length
     }
 });
 

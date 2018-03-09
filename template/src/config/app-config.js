@@ -1,7 +1,7 @@
 import API from './api';
 import _ from 'lodash';
 // env/dev会根据编译环境进行重组 (../../build/app-env.js)
-import AppConfig from './env/prd';
+import AppConfig from './env/undefined';
 
 const protocolReg = /^(https?:)?\/\//i;
 

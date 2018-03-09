@@ -5,7 +5,7 @@ const env = require('../app-env');
 module.exports = function jsLoaders() {
     return {
         'gulp-jsminer': {
-            _if: env.isIf,
+            _if: env.isProduction,
             preserveComments: '!',
             compress: {
                 warnings: false,

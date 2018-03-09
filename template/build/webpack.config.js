@@ -53,8 +53,6 @@ const config = _.extend({}, currentEnvConfig, {
         lodash: '_',
         moment: 'moment'
     },
-    // 4.0+ （采用config.optimization.optimization [Boolean] 或 config.optimization.minimizer [Array]）
-    optimization: {},
     stats: 'none'
 });
 

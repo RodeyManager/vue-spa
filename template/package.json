@@ -8,6 +8,7 @@
         "stg": "gupack build -e stg -s -f ./build/gupack-config.js",
         "prd": "gupack build -e prd -f ./build/gupack-config.js",
         "start": "gupack build -eso -f ./build/gupack-config.js",
+        "clean": "gupack clean -f ./build/gupack-config.js",
         "service": "nodemon ./server/app.js",
         "test": "gupack test -f ./build/gupack-config.js"
     },

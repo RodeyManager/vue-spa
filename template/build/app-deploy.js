@@ -16,7 +16,7 @@ module.exports = [
         timeout: 50000,
         // 本地路径，默认项目编译后输出路径 dist
         // localPath: path.join(env.dest.path, '/**/*'),
-        // 过滤上传列表
+        // 上传过滤列表
         // filters: [],
         remotePath: '/var/www/VUE_SPA'
     }

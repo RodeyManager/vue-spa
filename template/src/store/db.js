@@ -56,7 +56,7 @@ class DB {
         }
     }
     _saveTodos() {
-        if (!Array.isArray(this.todos) || this.todos.length === 0) return;
+        if (!Array.isArray(this.todos)) return;
         localStorage.setItem('_todos_', JSON.stringify(this.todos || []));
     }
 }
