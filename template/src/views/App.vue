@@ -11,23 +11,23 @@
 </template>
 
 <script>
-    import HeaderTitle from './layout/HeaderTitle.vue';
-    import FooterNav from './layout/FooterNav.vue';
+import HeaderTitle from './layout/HeaderTitle.vue';
+import FooterNav from './layout/FooterNav.vue';
 
-    export default {
-        name: 'App',
-        components: { HeaderTitle, FooterNav }
-    };
+export default {
+	name: 'App',
+	components: { HeaderTitle, FooterNav }
+};
 </script>
 
 <style scoped lang="scss">
-    .app-wapper {
-        width: 100%;
-        .main-container {
-            display: flex;
-            width: 100%;
-            max-width: 780px;
-            margin: 30px auto;
-        }
-    }
+.app-wapper {
+	width: 100%;
+	.main-container {
+		display: flex;
+		width: 100%;
+		max-width: 780px;
+		margin: 30px auto;
+	}
+}
 </style>

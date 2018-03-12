@@ -83,3 +83,4 @@ $RECYCLE.BIN/
 
 // build folder
 dist
+package-lock.json
