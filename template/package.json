@@ -1,7 +1,6 @@
 {
 	"name": "vue_spa",
 	"version": "1.0.0",
-	"main": "''",
 	"scripts": {
 		"local": "gupack build -e local -s -f ./build/gupack-config.js",
 		"dev": "gupack build -e dev -s -f ./build/gupack-config.js",
@@ -53,6 +52,15 @@
 	"directories": {
 		"test": "test"
 	},
+	"main": "src/main.js",
+	"files":[
+		"build",
+		"src",
+		"test",
+		".babelrc",
+		".editorconfig",
+		".eslintrc"
+	],
 	"dependencies": {
 		"axios": "^0.18.0",
 		"babel-polyfill": "^6.26.0",
