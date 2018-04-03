@@ -21,5 +21,14 @@ module.exports = {
 	// 部署配置
 	deploy: env.isProduction
 		? require('./deploy/prd.deploy')
-		: env.isStg ? require('./deploy/stg.deploy') : null
+		: env.isStg ? require('./deploy/stg.deploy') : null,
+	watch: !env.isProduction && [
+		'views/**/*',
+		'store/**/*',
+		'router/**/*',
+		'components/**/*',
+		'assets/**/*',
+		'main.js',
+		'index.html'
+	]
 };

@@ -85,3 +85,4 @@ $RECYCLE.BIN/
 dist
 package-lock.json
 backs
+backup.json

@@ -1,9 +1,8 @@
 {
 	"name": "vue_spa",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"scripts": {
-		"local":
-			"cross-env NODE_ENV=local gupack build -s -f ./build/gupack-config.js",
+		"local": "cross-env NODE_ENV=local gupack build -s -f ./build/gupack-config.js",
 		"dev": "gupack build -e dev -s -f ./build/gupack-config.js",
 		"stg": "gupack build -e stg -s -f ./build/gupack-config.js",
 		"prd": "gupack build -e prd -f ./build/gupack-config.js",
@@ -42,7 +41,7 @@
 		"gulp-webpack-multi-entry": "^1.0.3",
 		"minimist": "^1.2.0",
 		"prettier-eslint-cli": "^4.7.1",
-		"sass-loader": "^6.0.6",
+		"sass-loader": "^6.0.7",
 		"style-loader": "^0.20.2",
 		"svg-sprite-loader": "^3.6.2",
 		"svg-url-loader": "^2.3.1",
@@ -57,10 +56,18 @@
 		"test": "test"
 	},
 	"main": "src/main.js",
-	"files": ["build", "src", "test", ".babelrc", ".editorconfig", ".eslintrc"],
+	"files": [
+		"build",
+		"src",
+		"test",
+		".babelrc",
+		".editorconfig",
+		".eslintrc"
+	],
 	"dependencies": {
 		"axios": "^0.18.0",
 		"babel-polyfill": "^6.26.0",
+		"extract-text-webpack-plugin": "^4.0.0-beta.0",
 		"font-awesome": "^4.7.0",
 		"lodash": "^4.17.5",
 		"moment": "^2.21.0",
