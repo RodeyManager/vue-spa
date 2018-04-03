@@ -3,15 +3,13 @@
  */
 'use strict';
 
-const env = require('./app-env');
+const path = require('path');
 
 module.exports = [
 	{
-		// 是否开启
-		isExecute: env.isIf,
 		host: '192.168.233.130',
 		user: 'root',
-		pass: 'root123',
+		pass: 'rodey@123',
 		port: 22,
 		timeout: 50000,
 		// 本地路径，默认项目编译后输出路径 "dist"
@@ -20,6 +18,14 @@ module.exports = [
 		// filters: [],
 		// @String 部署方式，"full" 全量；"increment" 增量
 		type: 'increment',
+		// 远程目录
 		remotePath: '/var/www/VUE_SPA'
+	},
+	{
+		host: '192.168.233.130',
+		user: 'root',
+		pass: 'rodey@123',
+		type: 'increment',
+		remotePath: '/var/www/VUE_SPA_TEST'
 	}
 ];

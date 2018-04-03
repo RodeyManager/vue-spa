@@ -7,16 +7,16 @@ import App from './views/App.vue';
 Vue.use(VueRouter);
 
 new Vue({
-    el: '#app',
-    router,
-    store,
-    template: '<div><App /></div>',
-    components: {
-        App
-    }
+	el: '#app',
+	router,
+	store,
+	template: '<div><App /></div>',
+	components: {
+		App
+	}
 });
 
 // service api test
-// import TestService from './services/test.service';
+import TestService from './services/test.service';
 
-// TestService.test();
+TestService.test();

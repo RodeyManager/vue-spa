@@ -2,7 +2,8 @@
 	"name": "vue_spa",
 	"version": "1.0.0",
 	"scripts": {
-		"local": "gupack build -e local -s -f ./build/gupack-config.js",
+		"local":
+			"cross-env NODE_ENV=local gupack build -s -f ./build/gupack-config.js",
 		"dev": "gupack build -e dev -s -f ./build/gupack-config.js",
 		"stg": "gupack build -e stg -s -f ./build/gupack-config.js",
 		"prd": "gupack build -e prd -f ./build/gupack-config.js",
@@ -10,6 +11,8 @@
 		"clean": "gupack clean -f ./build/gupack-config.js",
 		"service": "nodemon ./server/app.js",
 		"test": "gupack test -f ./build/gupack-config.js",
+		"backup": "gupack backup -f ./build/gupack-config.js",
+		"rollback": "gupack rollback -f ./build/gupack-config.js",
 		"lint": "eslint *.js",
 		"format": "prettier-eslint --write *.js"
 	},
@@ -26,6 +29,7 @@
 		"babel-plugin-transform-export-extensions": "^6.22.0",
 		"babel-plugin-transform-object-rest-spread": "^6.26.0",
 		"babel-preset-env": "^1.6.1",
+		"cross-env": "^5.1.4",
 		"css-loader": "^0.28.10",
 		"gulp-autoprefixer": "^3.1.0",
 		"gulp-babel": "^7.0.1",
@@ -53,14 +57,7 @@
 		"test": "test"
 	},
 	"main": "src/main.js",
-	"files":[
-		"build",
-		"src",
-		"test",
-		".babelrc",
-		".editorconfig",
-		".eslintrc"
-	],
+	"files": ["build", "src", "test", ".babelrc", ".editorconfig", ".eslintrc"],
 	"dependencies": {
 		"axios": "^0.18.0",
 		"babel-polyfill": "^6.26.0",
