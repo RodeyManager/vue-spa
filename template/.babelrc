@@ -1,19 +1,29 @@
 {
-    "presets": [
-        "env"
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
     ],
-    "compact": true,
-    "plugins": [
-        "syntax-dynamic-import",
-        "add-module-exports",
-        "transform-export-extensions",
-        "transform-es2015-modules-commonjs",
-        [
-            "syntax-class-properties",
-            {
-                "spec": true
-            }
-        ],
-        "transform-object-rest-spread"
+    "stage-2"
+  ],
+  "plugins": [
+    "transform-runtime",
+    [
+      "component",
+      [
+        {
+          "libraryName": "element-ui",
+          "styleLibraryName": "theme-chalk"
+        }
+      ]
     ]
+  ],
+  "env": {
+    "test": {
+      "presets": ["env", "stage-2"],
+      "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
+    }
+  }
 }
