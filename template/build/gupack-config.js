@@ -10,7 +10,6 @@ module.exports = {
   buildDir: config.dest.path,
   // 每次执行编译之前是否清理当前编译目录
   startClean: true,
-  watch: false,
   // task任务列表
   buildTasks: require('./tasks'),
   // 部署配置

@@ -6,7 +6,14 @@ const webpack = require('webpack');
 const webpackConfig = require('./webpack.prod.conf');
 const env = process.env.NODE_ENV;
 
-const spinner = ora(`Start building for ${env}...`);
+const spinner = ora({
+  text: `Start building for ${env}...`,
+  // https://www.npmjs.com/package/cli-spinners
+  spinner: {
+    "interval": 80,
+    "frames": ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+  },
+});
 spinner.start();
 
 webpack(webpackConfig, (err, stats) => {

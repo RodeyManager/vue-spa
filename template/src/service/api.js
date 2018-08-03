@@ -1,27 +1,17 @@
 /**
  * API 接口地址定义
+ * key(接口名称) : value(接口地址)
  */
 export const test = {
   list: 'test',
   info: 'test',
   update: 'test',
-  del: 'test'
-};
-
-export const user = {
-  list: 'sys/user/list',
-  info: 'sys/user/info',
-  update: 'sys/user/update',
-  del: 'sys/user/delete',
+  del: 'test',
   vip: {
-    list: 'sys/user/vip/list',
-    info: 'sys/user/vip/info',
-    update: 'sys/user/vip/update',
-    del: 'sys/user/vip/delete'
+    list: 'test'
   }
 };
 
 export default {
-  test,
-  user
+  test
 };

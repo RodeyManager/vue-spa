@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const defaultConfig = {
-  // baseUrl: window.App.baseUrl,
   timeout: 1000 * 30,
   withCredentials: true,
   headers: {
@@ -10,7 +9,8 @@ const defaultConfig = {
   validateStatus: status => Number(status) >= 200 && Number(status) < 300
 };
 
-const config = Object.assign({}, defaultConfig, { ...window.App });
+const config = Object.assign({}, defaultConfig, { ...window.App
+});
 const service = axios.create(config);
 
 // request拦截器
@@ -20,6 +20,7 @@ service.interceptors.request.use(
     if (window.App.mock) {
       config.url += window.App.shuffix || '';
     }
+    // TODO 可以注入指定headers或公共参数
     return config;
   },
   error => Promise.reject(error)

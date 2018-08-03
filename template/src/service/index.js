@@ -1,7 +1,5 @@
-import * as User from './modules/user';
-import * as Test from './modules/test';
+import * as test from './modules/test';
 
 export default {
-  Test,
-  User
+  test
 };
