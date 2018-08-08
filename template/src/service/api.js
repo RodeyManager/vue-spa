@@ -11,7 +11,3 @@ export const test = {
     list: 'test'
   }
 };
-
-export default {
-  test
-};
