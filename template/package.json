@@ -8,7 +8,7 @@
     "stg": "cross-env NODE_ENV=stg  gupack build -f ./build/gupack-config.js",
     "prd": "cross-env NODE_ENV=prd  gupack build -f ./build/gupack-config.js",
     "build": "npm run prd",
-    "publish": "gupack publish -f ./build/gupack-config.js",
+    "deploy": "gupack deploy -f ./build/gupack-config.js",
     "rollback": "gupack rollback -f ./build/gupack-config.js",
     "clean": "gupack clean -f ./build/gupack-config.js",
     "service": "nodemon ./server/app.js",
