@@ -3,9 +3,11 @@
 </template>
 
 <script>
+import Service from '@/service';
+
 export default {
   created() {
-    this.Service.test.list({}).then(res => {
+    Service.test.list({}).then(res => {
       console.log('Home Request: ', res);
     });
   }

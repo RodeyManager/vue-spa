@@ -1,4 +1,9 @@
 ```javascript
+  // install gupack global
+  yarn global install gupack
+  // npm
+  // npm install gupack -g
+
   // init install npm packages
   yarn install
 

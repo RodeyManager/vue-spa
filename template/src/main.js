@@ -3,7 +3,6 @@ import VueRouter from 'vue-router';
 import App from '@/App';
 import router from '@/router';
 import store from '@/store';
-import Service from '@/service';
 
 import '@/assets/css/app.scss';
 
@@ -12,7 +11,8 @@ Vue.use(VueRouter);
 
 // 挂载
 // Vue.prototype.isMobile = navigator.userAgent.match(/mobile/i);
-Vue.prototype.Service = Service;
+// import Service from '@/service';
+// Vue.prototype.Service = Service;
 
 // 定义全局filter
 // Vue.filter('formatMoney', formatMoney);
