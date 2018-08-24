@@ -3,11 +3,19 @@
  * key(接口名称) : value(接口地址)
  */
 export const test = {
-  list: 'test',
-  info: 'test',
-  update: 'test',
-  del: 'test',
+  list: 'test/test',
+  info: 'test/test',
+  update: 'test/test',
+  del: 'test/test',
   vip: {
-    list: 'test'
+    list: 'test/test'
   }
+};
+
+/**
+ * 请求返回的错误码及相关提示语
+ */
+export const ERROR_CODE = {
+  '1001': '参数错误',
+  '1002': '登录已失效，请重新登录'
 };

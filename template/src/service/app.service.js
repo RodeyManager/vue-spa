@@ -1,10 +1,15 @@
 import axios from 'axios';
+import merge from 'lodash/merge';
+import {
+  ERROR_CODE
+} from './api';
 
 const defaultConfig = {
   timeout: 1000 * 30,
   withCredentials: true,
   headers: {
-    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Type': 'application/json; charset=utf-8',
+    // 'Content-Type': 'application/x-www-form-urlencoded'
   },
   validateStatus: status => Number(status) >= 200 && Number(status) < 300
 };
@@ -20,13 +25,44 @@ service.interceptors.request.use(
     if (window.App.mock) {
       config.url += window.App.shuffix || '';
     }
-    // TODO 可以注入指定headers或公共参数
-    return config;
+    // TODO 设置一些公共数据，如头部token信息等
+    return combine(config);
   },
   error => Promise.reject(error)
 );
 
 // response拦截器
 service.interceptors.response.use(response => response, error => Promise.reject(error));
+
+
+function combine(config) {
+  const {
+    method,
+    headers
+  } = config;
+  // method
+  if (['POST', 'PUT', 'PATCH'].indexOf(method.toLowerCase()) > -1) {
+    config.data = combineParams(config.data);
+  } else if (['GET', 'DELETE'].indexOf(method.toLowerCase()) > -1) {
+    config.params = combineParams(config.params);
+  }
+  // headers
+  headers['token'] = 'XXXXXXXXXXXXXXXXXX';
+  return config;
+}
+
+function combineParams(data) {
+  // 接口公共参数配置
+  const commonData = {
+    _t: Date.now()
+  };
+  return merge(data, commonData);
+}
+
+// 返回接口完整url
+export function requestURL(name) {
+  return window.App.baseURL.replace(/\/$/i, '') + '/' + name.replace(/^\//i, '');
+}
+
 
 export default service;
