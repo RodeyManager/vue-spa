@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --inline --progress --config ./build/webpack/webpack.dev.conf.js",
     "start": "npm run dev",
-    "stg": "cross-env NODE_ENV=stg  gupack build -f ./build/gupack-config.js",
+    "sit": "cross-env NODE_ENV=sit  gupack build -f ./build/gupack-config.js",
+    "uat": "cross-env NODE_ENV=uat  gupack build -f ./build/gupack-config.js",
     "prd": "cross-env NODE_ENV=prd  gupack build -f ./build/gupack-config.js",
     "build": "npm run prd",
     "deploy": "gupack deploy -f ./build/gupack-config.js",

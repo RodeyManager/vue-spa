@@ -6,8 +6,13 @@
 const path = require('path');
 const config = require('../../config');
 
+const {
+  env,
+  dest
+} = config;
+
 const backup = {
-  outPath: path.resolve(config.dest.path, '../backs'),
+  outPath: path.resolve(dest.path, '../backs'),
   name: 'VUE_SPA-',
   // 备份模式：
   // remote (远程备份，将备份文件存在远程服务器上，需要有server shell的执行权限 [ zip, unzip, cd ])
@@ -17,17 +22,17 @@ const backup = {
   log: 'progress'
 };
 
-module.exports = [{
-  host: '192.168.233.130',
-  user: 'root',
-  pass: 'rodey@123',
-  port: 22,
-  timeout: 50000,
-  // 本地路径，默认项目编译后输出路径 dist
-  // localPath: path.join(env.dest.path, '/**/*'),
-  // 过滤上传列表
-  // filters: [],
-  remotePath: '/var/www/VUE_SPA',
-  type: 'increment',
-  backup: ['stg', 'stage'].indexOf(config.env) > -1 && backup
-}];
+const servers = {
+  sit: [],
+  uat: [{
+    host: '10.142.142.117',
+    user: 'root',
+    pass: 'root123',
+    remotePath: '/var/www/VUE_SPA',
+    type: 'increment',
+    // backup
+  }, ],
+  prd: [],
+};
+
+module.exports = servers[env];

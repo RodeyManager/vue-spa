@@ -21,7 +21,6 @@ module.exports = {
   'build.concat:config': {
     src: [`${sourcePath}/config/env/${config.env}.js`, `${sourcePath}/config/init.js`],
     dest: `${distPath}/assets/js`,
-    // rely: ['build.main'],
     loader: stream => stream.pipe($.concat('index.js'))
   },
 
