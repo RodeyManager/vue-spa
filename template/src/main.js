@@ -10,12 +10,8 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
 // 挂载
-// Vue.prototype.isMobile = navigator.userAgent.match(/mobile/i);
-// import Service from '@/service';
-// Vue.prototype.Service = Service;
-
-// 定义全局filter
-// Vue.filter('formatMoney', formatMoney);
+import Service from '@/service';
+Vue.prototype.SERVER = Service;
 
 new Vue({
   el: '#app',

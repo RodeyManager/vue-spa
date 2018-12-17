@@ -14,9 +14,7 @@ export function info(id) {
 }
 
 export function update(data) {
-  return request.post(test.update, {
-    ...data
-  });
+  return request.post(test.update, data);
 }
 
 export function del(id) {

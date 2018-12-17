@@ -14,18 +14,19 @@ const defaultConfig = {
   validateStatus: status => Number(status) >= 200 && Number(status) < 300
 };
 
-const config = Object.assign({}, defaultConfig, { ...window.App
+const config = Object.assign({}, defaultConfig, { ...APP_CONFIG
 });
 const service = axios.create(config);
+
 
 // request拦截器
 service.interceptors.request.use(
   config => {
     // 如果是本地开发环境，可能需要本地mock json数据
-    if (window.App.mock) {
-      config.url += window.App.shuffix || '';
+    if (APP_CONFIG.mock) {
+      config.url += APP_CONFIG.shuffix || '';
     }
-    // TODO 设置一些公共数据，如头部token信息等
+    // 设置一些公共数据，如头部token信息等
     return combine(config);
   },
   error => Promise.reject(error)
@@ -40,12 +41,14 @@ function combine(config) {
     method,
     headers
   } = config;
+
   // method
-  if (['POST', 'PUT', 'PATCH'].indexOf(method.toLowerCase()) > -1) {
+  if (['post', 'put', 'patch'].indexOf(method) > -1) {
     config.data = combineParams(config.data);
-  } else if (['GET', 'DELETE'].indexOf(method.toLowerCase()) > -1) {
+  } else if (['get', 'delete'].indexOf(method) > -1) {
     config.params = combineParams(config.params);
   }
+
   // headers
   headers['token'] = 'XXXXXXXXXXXXXXXXXX';
   return config;
@@ -61,8 +64,7 @@ function combineParams(data) {
 
 // 返回接口完整url
 export function requestURL(name) {
-  return window.App.baseURL.replace(/\/$/i, '') + '/' + name.replace(/^\//i, '');
+  return APP_CONFIG.baseURL.replace(/\/$/i, '') + '/' + name.replace(/^\//i, '');
 }
-
 
 export default service;

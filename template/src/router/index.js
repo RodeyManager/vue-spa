@@ -17,32 +17,6 @@ const routerMapping = [{
     name: 'home'
   },
   {
-    path: '/todo',
-    component: _import('todo/index'),
-    name: 'todo',
-    children: [{
-        path: '',
-        component: _import('todo/todo'),
-      },
-      {
-        path: 'complete',
-        component: _import('todo/todo'),
-        name: 'complete',
-        meta: {
-          type: '1'
-        }
-      },
-      {
-        path: 'uncomplete',
-        component: _import('todo/todo'),
-        name: 'uncomplete',
-        meta: {
-          type: '0'
-        }
-      },
-    ]
-  },
-  {
     path: '/test',
     component: _import('test/index'),
     name: 'test'

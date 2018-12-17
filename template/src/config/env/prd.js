@@ -1,9 +1,9 @@
 /**
  * 生产环境
  */
-(function(window, document) {
-  window.App = {
+(function () {
+  this.APP_CONFIG = {
     // 接口host
     baseURL: '/api/'
   };
-})(window, document);
+}).call(this);

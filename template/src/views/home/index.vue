@@ -3,12 +3,11 @@
 </template>
 
 <script>
-import Service from '@/service';
 
 export default {
   created() {
-    Service.test.list({}).then(res => {
-      console.log('Home Request: ', res);
+    this.SERVER.test.list({ limit: 100 }).then(res => {
+      console.log('Home Request GET: ', res);
     });
   }
 };

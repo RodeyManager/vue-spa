@@ -4,9 +4,6 @@
       <router-link to="/home">Home</router-link>
     </li>
     <li>
-      <router-link to="/todo">Todo App</router-link>
-    </li>
-    <li>
       <router-link to="/test">Test</router-link>
     </li>
   </ul>

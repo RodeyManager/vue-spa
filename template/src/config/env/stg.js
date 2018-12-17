@@ -2,8 +2,8 @@
  * 测试环境
  */
 
-(function(window, document) {
-  window.App = {
+(function () {
+  this.APP_CONFIG = {
     baseURL: '/api/'
   };
-})(window, document);
+}).call(this);
